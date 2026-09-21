@@ -7,63 +7,64 @@ fun main() {
 // 3 задание
 fun task3() {
     // Создать множество из чисел и вывести его.
+    
 }
 
 // 2 задание
-fun task2() {
-    // 1 Создать список целых чисел и добавить в него 10 элементов.
-    var numbers = ArrayList<Int>()
-    for (i in 1..10) {
-        numbers.add(i)
-    }
+// fun task2() {
+//     // 1 Создать список целых чисел и добавить в него 10 элементов.
+//     var numbers = ArrayList<Int>()
+//     for (i in 1..10) {
+//         numbers.add(i)
+//     }
 
-    // 2 Удалить элемент из списка по индексу.
-    numbers.removeAt(2) // удалит число 3
-    println(numbers) // ​вывод [1, 2, 4, 5, 6, 7, 8, 9, 10]
+//     // 2 Удалить элемент из списка по индексу.
+//     numbers.removeAt(2) // удалит число 3
+//     println(numbers) // ​вывод [1, 2, 4, 5, 6, 7, 8, 9, 10]
 
-    // 3 Найти среднее значение элементов списка.
-    println(numbers.average()) // вывод 5.7777...
+//     // 3 Найти среднее значение элементов списка.
+//     println(numbers.average()) // вывод 5.7777...
 
-    // 4 Проверить, пустой ли список
-    if (numbers.isEmpty()) {
-        println("список пуст")
-    } else {
-        println("список не пуст") // <- этот вывод
-    }
+//     // 4 Проверить, пустой ли список
+//     if (numbers.isEmpty()) {
+//         println("список пуст")
+//     } else {
+//         println("список не пуст") // <- этот вывод
+//     }
 
-    // 5 Заменить элемент списка на другой.
-    val arr = mutableListOf("Lord", "Acorn", "Lorem") // mutableListOf для превращения в ArrayList
-    arr[0] = "Minor"
-    println(arr) // вывод [Minor, Acorn, Lorem]
+//     // 5 Заменить элемент списка на другой.
+//     val arr = mutableListOf("Lord", "Acorn", "Lorem") // mutableListOf для превращения в ArrayList
+//     arr[0] = "Minor"
+//     println(arr) // вывод [Minor, Acorn, Lorem]
 
-    // 6 Перевести список строк в верхний регистр.
-    for (i in arr.indices) {
-        arr[i] = arr[i].uppercase()
-    }
-    println(arr) // вывод [MINOR, ACORN, LOREM]
+//     // 6 Перевести список строк в верхний регистр.
+//     for (i in arr.indices) {
+//         arr[i] = arr[i].uppercase()
+//     }
+//     println(arr) // вывод [MINOR, ACORN, LOREM]
 
-    // 7 Создать список чисел и удалить все чётные.
-    val numbers2 = listOf(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
-    val newNumbers = numbers2.filter { it % 2 != 0 }
-    println(newNumbers) // вывод [1, 3, 5, 7, 9]
+//     // 7 Создать список чисел и удалить все чётные.
+//     val numbers2 = listOf(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+//     val newNumbers = numbers2.filter { it % 2 != 0 }
+//     println(newNumbers) // вывод [1, 3, 5, 7, 9]
 
-    // 8 Объединить два списка в один.
-    val list1 = listOf(1, 2)
-    val list2 = listOf(3, 4)
-    println(list1 + list2) // вывод [1, 2, 3, 4]
+//     // 8 Объединить два списка в один.
+//     val list1 = listOf(1, 2)
+//     val list2 = listOf(3, 4)
+//     println(list1 + list2) // вывод [1, 2, 3, 4]
 
-    // 9 Найти второй по величине элемент списка.
-    val numbers3 = listOf(5, 10, 10, 2, 8, 1)
-    val secondMax = numbers3
-        .distinct() // убрать повторяющиеся
-        .sortedDescending() // сортировать по убыванию
-        .getOrNull(1) // взять элемент по 1 индексу
-    println(secondMax) // вывод: 8
+//     // 9 Найти второй по величине элемент списка.
+//     val numbers3 = listOf(5, 10, 10, 2, 8, 1)
+//     val secondMax = numbers3
+//         .distinct() // убрать повторяющиеся
+//         .sortedDescending() // сортировать по убыванию
+//         .getOrNull(1) // взять элемент по 1 индексу
+//     println(secondMax) // вывод: 8
 
-    // 10 Преобразовать список чисел в множество (Set).
-    val nmbrs = listOf(1, 2, 2, 3, 4, 4, 5)
-    val nmbrsSet = nmbrs.toSet()
-}
+//     // 10 Преобразовать список чисел в множество (Set).
+//     val nmbrs = listOf(1, 2, 2, 3, 4, 4, 5)
+//     val nmbrsSet = nmbrs.toSet()
+// }
 
 // 1 задание
 // fun task1() {
