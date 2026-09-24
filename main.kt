@@ -2,12 +2,72 @@ fun main() {
     // вызываю задания как функции
     // task1()
     // task2()
-    task3()
+    // task3()
+    task4()
 }
 
 // 4 задание
 fun task4() {
-    
+    // 1 Создать словарь (Map) с ключами Int и значениями String (например, ID → имя).
+    val people: Map<Int, String> = mapOf(
+        1 to "Andre",
+        2 to "Alice",
+        3 to "John"
+    )
+    println(people) // {1=Andre, 2=Alice, 3=John}
+
+    // 2 Добавить новый элемент в Map.
+    val newPeople = people.toMutableMap() // перевожу сначала в мутабельный мэп
+    newPeople.put(4, "Miku")
+    println(newPeople) // вывод: {1=Andre, 2=Alice, 3=John, 4=Miku}
+
+    // 3 Получить значение по ключу.
+    println(newPeople[4]) // вывод: Miku
+
+    // 4 Проверить, есть ли ключ в Map.
+    if (1 in newPeople) {
+        println("ключ 1 есть") // вывод: ключ 1 есть
+    } else {
+        println("ключа нет")
+    }
+
+    // 5 Проверить, есть ли значение в Map.
+    if (newPeople.containsValue("Miku")) {
+        println("Мику есть!") // <- этот вывод
+    } else {
+        println("Мику нет :(")
+    }
+
+    // 6 Вывести все ключи и значения.
+    println("Все ключи:")
+    for ((id, _) in newPeople) {
+        println("$id")
+    } // вывод построчно: 1, 2, 3, 4
+    println("Все значения:")
+    for ((_, person) in newPeople) {
+        println("$person")
+    } // вывод построчно: Andre, Alice, John, Miku
+
+    // 7 Удалить элемент по ключу.
+    newPeople -= 4
+    println(newPeople) // вывод: {1=Andre, 2=Alice, 3=John} без Miku
+
+    // 8 Посчитать количество элементов в Map.
+    println(newPeople.size) // вывод: 3
+
+    // 9 Пройтись циклом по словарю и вывести все пары ключ-значение.
+    for ((id, person) in newPeople) {
+        println("ID: $id, Name: $person")
+    } // вывод: ID: 1, Name: Andre... и дальше построчно
+
+    // 10 Создать Map для хранения оценок студентов и найти среднюю оценку.
+    val grades = mapOf(
+        "Dmitry" to 5,
+        "Andre" to 3,
+        "Ivan" to 2,
+    )
+    val average = grades.values.average()
+    println("средняя оценка: $average") // вывод: средняя оценка: 3.3333333333333335
 }
 
 // 3 задание
